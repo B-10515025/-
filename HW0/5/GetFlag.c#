@@ -1,0 +1,118 @@
+//Rextester.Program.Main is the entry point for your code. Don't change it.
+//Microsoft (R) Visual C# Compiler version 2.9.0.63208 (958f2354)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Text;
+namespace Rextester
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            List<byte> list = new List<byte>();
+            list.Add(137);
+            list.Add(175);
+            list.Add(25);
+            list.Add(15);
+            list.Add(244);
+            list.Add(253);
+            list.Add(51);
+            list.Add(157);
+            list.Add(235);
+            list.Add(140);
+            list.Add(22);
+            list.Add(35);
+            list.Add(252);
+            list.Add(254);
+            list.Add(38);
+            list.Add(255);
+            byte[] array = new byte[]
+	{
+		250,
+		241,
+		107,
+		182,
+		244,
+		110,
+		21,
+		129,
+		17,
+		240,
+		155,
+		200,
+		111,
+		111,
+		225,
+		110,
+		180,
+		224,
+		156,
+		194,
+		29,
+		106,
+		141,
+		216,
+		99,
+		58,
+		59,
+		191,
+		45,
+		227,
+		184,
+		221,
+		63,
+		139,
+		223,
+		232,
+		129,
+		201,
+		121,
+		62,
+		164,
+		113,
+		247,
+		230,
+		67,
+		108,
+		182,
+		231
+	};
+	byte[] array2 = list.ToArray();
+	int[] array3 = new int[256];
+	int[] array4 = new int[256];
+	byte[] array5 = new byte[array.Length];
+	int j;
+	for (j = 0; j < 256; j++)
+	{
+		array3[j] = (int)array2[j % array2.Length];
+		array4[j] = j;
+	}
+	int num;
+	for (j = (num = 0); j < 256; j++)
+	{
+		num = (num + array4[j] + array3[j]) % 256;
+		int num2 = array4[j];
+		array4[j] = array4[num];
+		array4[num] = num2;
+	}
+	int num3;
+	num = (num3 = (j = 0));
+	while (j < array.Length)
+	{
+		num3++;
+		num3 %= 256;
+		num += array4[num3];
+		num %= 256;
+		int num2 = array4[num3];
+		array4[num3] = array4[num];
+		array4[num] = num2;
+		int num4 = array4[(array4[num3] + array4[num]) % 256];
+		array5[j] = (byte)((int)array[j] ^ num4);
+		j++;
+	}
+            Console.WriteLine(Encoding.ASCII.GetString(array5));
+        }
+    }
+}
