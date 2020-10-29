@@ -20,7 +20,7 @@ def main():
     print('----- flag will appear below -----')
 
     # watch for token in blockchain
-    factory = w3.eth.contract(address=FACTORY_ADDRESS, abi=FACTORY_ABI) 
+    factory = w3.eth.contract(address=FACTORY_ADDRESS, abi=FACTORY_ABI)
     event_filter = factory.events.GetFlag.createFilter(fromBlock='latest', argument_filters={'token': int(token, 16)})
     while True:
         if event_filter.get_new_entries():
