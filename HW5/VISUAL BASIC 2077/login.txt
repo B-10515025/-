@@ -1,0 +1,2 @@
+username: {flag.flag}'
+password:  union select "{flag.flag}"||char(39),replace("XX),2,80)) --","X",substr(quote(' union select "{flag.flag}"||char(39),replace("XX),2,80)) --","X",substr(quote('),2,80)) --

