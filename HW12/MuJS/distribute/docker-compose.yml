@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mujs:
+    build: ./
+    volumes:
+      - ./share:/home/MuJS:ro
+      - ./xinetd:/etc/xinetd.d/mujs:ro
+    ports:
+      - "30108:10101"
+    expose:
+      - "10101"
